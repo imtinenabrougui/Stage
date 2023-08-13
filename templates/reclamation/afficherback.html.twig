@@ -1,0 +1,39 @@
+{% extends 'back.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+   <center> <h1>Reclamation</h1> </center>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Cin</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td>{{ reclamation.titre }}</td>
+                <td>{{ reclamation.cin }}</td>
+                <td>{{ reclamation.email }}</td>
+                <td>{{ reclamation.description }}</td>
+                <td>{{ reclamation.type }}</td>
+                <td>
+                    <a href="{{ path('app_reclamation_show', {'idr': reclamation.idr}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}New Ficheclient{% endblock %}
+
+{% block body %}
+    <h1>Create new Ficheclient</h1>
+
+    {{ include('ficheclient/_form.html.twig') }}
+
+    <a href="{{ path('app_ficheclient_index') }}">back to list</a>
+{% endblock %}

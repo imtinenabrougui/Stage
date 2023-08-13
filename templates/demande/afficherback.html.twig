@@ -1,0 +1,41 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}Demande {% endblock %}
+
+{% block body %}
+    <h1>Demande </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+               
+                <th>Cin</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>DateNaissance</th>
+               
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for demande in demandes %}
+            <tr>
+               
+                <td>{{ demande.cin }}</td>
+                <td>{{ demande.nom }}</td>
+                <td>{{ demande.prenom }}</td>
+                <td>{{ demande.dateNaissance }}</td>
+                
+                <td>
+                    <a href="{{ path('app_demande_show', {'id': demande.id}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="23">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

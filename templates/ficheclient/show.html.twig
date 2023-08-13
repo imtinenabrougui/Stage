@@ -1,0 +1,170 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Ficheclient{% endblock %}
+
+{% block body %}
+    <h1>Ficheclient</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Idfc</th>
+                <td>{{ ficheclient.idfc }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ ficheclient.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ ficheclient.prenom }}</td>
+            </tr>
+            <tr>
+                <th>DateOuverturecompte</th>
+                <td>{{ ficheclient.dateOuverturecompte }}</td>
+            </tr>
+            <tr>
+                <th>Agence</th>
+                <td>{{ ficheclient.agence }}</td>
+            </tr>
+            <tr>
+                <th>TitreCivilite</th>
+                <td>{{ ficheclient.titreCivilite }}</td>
+            </tr>
+            <tr>
+                <th>NomPere</th>
+                <td>{{ ficheclient.nomPere }}</td>
+            </tr>
+            <tr>
+                <th>PrenomPere</th>
+                <td>{{ ficheclient.prenomPere }}</td>
+            </tr>
+            <tr>
+                <th>TypeClient</th>
+                <td>{{ ficheclient.typeClient }}</td>
+            </tr>
+            <tr>
+                <th>TypeDocument</th>
+                <td>{{ ficheclient.typeDocument }}</td>
+            </tr>
+            <tr>
+                <th>NumeroDocument</th>
+                <td>{{ ficheclient.numeroDocument }}</td>
+            </tr>
+            <tr>
+                <th>DateDelivrance</th>
+                <td>{{ ficheclient.dateDelivrance }}</td>
+            </tr>
+            <tr>
+                <th>LieuDelevrance</th>
+                <td>{{ ficheclient.lieuDelevrance }}</td>
+            </tr>
+            <tr>
+                <th>Nationalite</th>
+                <td>{{ ficheclient.nationalite }}</td>
+            </tr>
+            <tr>
+                <th>DateNaissance</th>
+                <td>{{ ficheclient.dateNaissance }}</td>
+            </tr>
+            <tr>
+                <th>PaysNaissance</th>
+                <td>{{ ficheclient.paysNaissance }}</td>
+            </tr>
+            <tr>
+                <th>LieuNaissance</th>
+                <td>{{ ficheclient.lieuNaissance }}</td>
+            </tr>
+            <tr>
+                <th>AutreNationalite</th>
+                <td>{{ ficheclient.autreNationalite }}</td>
+            </tr>
+            <tr>
+                <th>EtatCivil</th>
+                <td>{{ ficheclient.etatCivil }}</td>
+            </tr>
+            <tr>
+                <th>NbrEnfant</th>
+                <td>{{ ficheclient.nbrEnfant }}</td>
+            </tr>
+            <tr>
+                <th>NumeroTelephone</th>
+                <td>{{ ficheclient.numeroTelephone }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ ficheclient.adresse }}</td>
+            </tr>
+            <tr>
+                <th>CodePostal</th>
+                <td>{{ ficheclient.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Gouvernerat</th>
+                <td>{{ ficheclient.gouvernerat }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ ficheclient.pays }}</td>
+            </tr>
+            <tr>
+                <th>StatusProfessionnel</th>
+                <td>{{ ficheclient.statusProfessionnel }}</td>
+            </tr>
+            <tr>
+                <th>PositionProfessionnel</th>
+                <td>{{ ficheclient.positionProfessionnel }}</td>
+            </tr>
+            <tr>
+                <th>FonctionExercee</th>
+                <td>{{ ficheclient.fonctionExercee }}</td>
+            </tr>
+            <tr>
+                <th>ActiviteProfessionnel</th>
+                <td>{{ ficheclient.activiteProfessionnel }}</td>
+            </tr>
+            <tr>
+                <th>Profession</th>
+                <td>{{ ficheclient.profession }}</td>
+            </tr>
+            <tr>
+                <th>AdresseProfessionnelle</th>
+                <td>{{ ficheclient.adresseProfessionnelle }}</td>
+            </tr>
+            <tr>
+                <th>FonctionPublique</th>
+                <td>{{ ficheclient.fonctionPublique }}</td>
+            </tr>
+            <tr>
+                <th>NatureEmployeur</th>
+                <td>{{ ficheclient.natureEmployeur }}</td>
+            </tr>
+            <tr>
+                <th>TypeCompte</th>
+                <td>{{ ficheclient.typeCompte }}</td>
+            </tr>
+            <tr>
+                <th>SourcesFonds</th>
+                <td>{{ ficheclient.sourcesFonds }}</td>
+            </tr>
+            <tr>
+                <th>SourcePatirimoine</th>
+                <td>{{ ficheclient.sourcePatirimoine }}</td>
+            </tr>
+            <tr>
+                <th>RevenusAnnuels</th>
+                <td>{{ ficheclient.revenusAnnuels }}</td>
+            </tr>
+            <tr>
+                <th>ChargeAnnuelles</th>
+                <td>{{ ficheclient.chargeAnnuelles }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_ficheclient_index') }}">back to list</a>
+
+    <a href="{{ path('app_ficheclient_edit', {'idfc': ficheclient.idfc}) }}">edit</a>
+
+    {{ include('ficheclient/_delete_form.html.twig') }}
+{% endblock %}

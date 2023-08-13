@@ -1,0 +1,18 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+home:
+    path: /home
+    controller: App\Controller\HomeController::index
+app_article:
+    resource: App\Controller\ArticleController
+    type: annotation
+app_reclamtion:
+    resource: App\Controller\ReclamationController
+    type: annotation
+app_demande:
+    resource: App\Controller\DemandeController
+    type: annotation
+app_ficheclient:
+    resource: App\Controller\FicheclientController
+    type: annotation

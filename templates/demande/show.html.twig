@@ -1,0 +1,108 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Demande{% endblock %}
+
+{% block body %}
+    <h1>Demande</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ demande.id }}</td>
+            </tr>
+            <tr>
+                <th>Cin</th>
+                <td>{{ demande.cin }}</td>
+            </tr>
+            <tr>
+                <th>DateDelivrance</th>
+                <td>{{ demande.dateDelivrance }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ demande.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ demande.prenom }}</td>
+            </tr>
+            <tr>
+                <th>DateNaissance</th>
+                <td>{{ demande.dateNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Profession</th>
+                <td>{{ demande.profession }}</td>
+            </tr>
+            <tr>
+                <th>EtatCivil</th>
+                <td>{{ demande.etatCivil }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ demande.adresse }}</td>
+            </tr>
+            <tr>
+                <th>IdentiteEmployeur</th>
+                <td>{{ demande.identiteEmployeur }}</td>
+            </tr>
+            <tr>
+                <th>AdresseEmployeur</th>
+                <td>{{ demande.adresseEmployeur }}</td>
+            </tr>
+            <tr>
+                <th>NumeroCompte</th>
+                <td>{{ demande.numeroCompte }}</td>
+            </tr>
+            <tr>
+                <th>Salaire</th>
+                <td>{{ demande.salaire }}</td>
+            </tr>
+            <tr>
+                <th>MontantCredit</th>
+                <td>{{ demande.montantCredit }}</td>
+            </tr>
+            <tr>
+                <th>ObjetCredit</th>
+                <td>{{ demande.objetCredit }}</td>
+            </tr>
+            <tr>
+                <th>BesoinsCourants</th>
+                <td>{{ demande.besoinsCourants }}</td>
+            </tr>
+            <tr>
+                <th>AcquisitionVehicule</th>
+                <td>{{ demande.acquisitionVehicule }}</td>
+            </tr>
+            <tr>
+                <th>Amenagement</th>
+                <td>{{ demande.amenagement }}</td>
+            </tr>
+       
+          <tr>
+                <th style="width:250px">attestationSalaire</th>
+                <td><img src="{{ asset('img/'~ demande.attestationSalaire ) }}" width="10%" height="10%">{{ demande.attestationSalaire }}</td>
+            </tr>
+           <tr>
+                <th style="width:250px">CopieCin</th>
+                <td><img src="{{ asset('img/'~ demande.CopieCin ) }}" width="10%" height="10%">{{ demande.CopieCin }}</td>
+            </tr>
+              <tr>
+                <th style="width:250px">fichePaie</th>
+                <td><img src="{{ asset('img/'~ demande.fichePaie ) }}" width="10%" height="10%">{{ demande.fichePaie }}</td>
+            </tr>
+             <tr>
+                <th style="width:250px">Devis</th>
+                <td><img src="{{ asset('img/'~ demande.devis ) }}" width="10%" height="10%">{{ demande.devis }}</td>
+            </tr>
+ 
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_demande_index') }}">back to list</a>
+
+    <a href="{{ path('app_demande_edit', {'id': demande.id}) }}">edit</a>
+
+    {{ include('demande/_delete_form.html.twig') }}
+{% endblock %}

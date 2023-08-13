@@ -1,0 +1,16 @@
+       <style>
+    .green-button {
+        background-color: green;
+        /* Autres styles CSS */
+        cursor: pointer;
+    }
+
+    .green-button:hover {
+        background-color: gray;
+        /* Autres styles CSS */
+    }
+</style>
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn green-button">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

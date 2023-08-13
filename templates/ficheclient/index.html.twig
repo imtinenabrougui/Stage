@@ -1,0 +1,41 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Fiche client {% endblock %}
+
+{% block body %}
+    <h1>Fiche client </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+              
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>DateOuverturecompte</th>
+                <th>Agence</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ficheclient in ficheclients %}
+            <tr>
+             
+                <td>{{ ficheclient.nom }}</td>
+                <td>{{ ficheclient.prenom }}</td>
+                <td>{{ ficheclient.dateOuverturecompte }}</td>
+                <td>{{ ficheclient.agence }}</td>
+                
+                <td>
+                    <a href="{{ path('app_ficheclient_show', {'idfc': ficheclient.idfc}) }}">show</a>
+                    <a href="{{ path('app_ficheclient_edit', {'idfc': ficheclient.idfc}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="39">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
